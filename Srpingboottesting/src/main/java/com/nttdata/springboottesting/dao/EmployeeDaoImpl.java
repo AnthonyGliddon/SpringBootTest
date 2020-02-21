@@ -20,6 +20,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public boolean insertEmployee(UUID id, Employee emp) {
 		DB.add(new Employee(emp.getName(), id));
+		System.out.println("Dao Layer called");
 		return true;
 	}
 

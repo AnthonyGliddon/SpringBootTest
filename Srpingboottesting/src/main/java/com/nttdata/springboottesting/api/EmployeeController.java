@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.nttdata.springboottesting.model.Employee;
 import com.nttdata.springboottesting.service.EmployeeService;
 
-@RequestMapping("/api/v1/employee")
+@RequestMapping("/empmgt/")
 @RestController
 public class EmployeeController {
 	
-	private  EmployeeService employeeService;
+	private EmployeeService employeeService;
 
 	
 	
@@ -26,6 +26,8 @@ public class EmployeeController {
 	@PostMapping
 	public void insertEmployee(@RequestBody Employee emp) {
 		employeeService.insertEmployee(emp);
+		System.out.println("api called");
+		
 	}
 	
 

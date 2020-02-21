@@ -21,8 +21,8 @@ public class EmployeeService {
 	}
 
 	public boolean insertEmployee(Employee emp) {
+		System.out.println("service Layer called");
 		return EMPLOYEE_DAO.insertEmployee(emp);
-		
 	}
 	
 }
